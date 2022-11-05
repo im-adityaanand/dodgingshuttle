@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+html{
+    height: 100%
+}
+
+body{
+    background-image: linear-gradient(#3E1A49, #8B3A59);
+    color: white;
+    text-align: center;
+}
+
+.na{
+    display: none;
+}
+
+
+
+
+/* Start Screen */
+
+.bg-image{
+    position: absolute;
+    left: 40%;
+    top: 100px;
+    height: 400px;
+}
+
+.logo-div{
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+}
+
+.game-logo{
+    height: 200px;
+    z-index: 1;
+    margin-top: 50px;
+}
+
+.buttons-div{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 120px 50px 0;
+}
+
+.play-button, .info-button, input {
+    border: 3px solid white;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 900;
+    padding: 12px;
+    margin: 10px auto;
+}
+
+input {
+    padding: 12px 20px;
+    width: 300px;
+}
+
+::placeholder{
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.play-button {
+    width: 170px;
+    cursor: pointer;
+}
+
+.info-button {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    padding: 12px 20px;
+    cursor: pointer;
+}
+
+.info-div{
+    position: absolute;
+    background-color: rgba(0, 0, 0, .8);
+    border: 5px solid white;
+    border-radius: 30px;
+    z-index: 2;
+    top: 80px;
+    right: 80px;
+    width: 60vw;
+    padding: 50px;
+}
+
+.info-div p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: normal;
+}
+
+
+
+
+/* Game Screen */
+
+.click-to-start{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 300px;
+}
+
+.level-text {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+p{
+    font-size: 25px;
+    font-weight: 900;
+    line-height: 50px;
+}
+
+.score-div{
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    z-index: 1;
+}
+
+.score-div span{
+    font-size: 20px;
+    font-weight: 900;
+}
+
+#shuttle{
+    position: absolute;
+    height: 90px;
+    bottom: 50px;
+    left: 50%;
+}
+
+.asteroid{
+    position: absolute;
+    height: 250px;
+    animation: flying 1s linear;
+    top: -250px;
+}
+
+@keyframes flying {
+    0% {
+        top: -300px;
+    }
+
+    100% {
+        top: 100vh;
+    }
+}
+
+
+
+/* Game over Screen */
+
+.game-over-text {
+    font-size: 60px;
+    margin-top: 150px;
+}
+
+.scores-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.result-div{
+    margin: 30px 80px;
+}
+
+.score-heading {
+    font-size: 30px;
+}
+
+.score, .highScore {
+    font-size: 100px;
+    line-height: normal;
+}
+
+.playerName {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 20px auto;
+}
+
+
+
+/* Media queries */
+
+@media (max-width: 750px){
+    .bg-image{
+        height: 300px;
+    }
+
+    .logo-div{
+        margin-top: 100px;
+    }
+
+    .game-logo{
+        height: 150px;
+    }
+
+    .buttons-div{
+        margin: 100px 50px 0;
+    }
+
+    .info-button {
+        top: 10px;
+        right: 20px;
+    }
+
+    .info-div{
+        top: 80px;
+        right: 15px;
+        width: 80vw;
+        padding: 20px;
+    }
+
+    .info-div p {
+        font-weight: 400;
+        font-size: 15px;
+    }
+    
+    .score-div{
+        top: 30px;
+        left: 30px;
+    }
+
+    #shuttle{
+        height: 50px;
+        bottom: 50px;
+    }
+
+    .asteroid{
+        height: 150px;
+    }
+
+    .game-over-text {
+        font-size: 40px;
+        margin-top: 80px;
+    }
+
+    .result-div{
+        margin: 30px 40px;
+    }
+
+    .score-heading {
+        font-size: 20px;
+    }
+
+    .score, .highScore {
+        font-size: 70px;
+        line-height: normal;
+    }
+
+    .playerName {
+        margin-top: 80px;
+        font-size: 15px;
+    }
+}
